@@ -1,0 +1,11 @@
+let MAJOR_VERSION = 0
+let MINOR_VERSION = 1
+let RELEASE = 0
+
+struct Version:
+    major: int
+    minor: int
+    release: int
+
+fn version() -> Version:
+    Version{MAJOR_VERSION, MINOR_VERSION, RELEASE}
