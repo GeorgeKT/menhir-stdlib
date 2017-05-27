@@ -1,0 +1,18 @@
+import std::libc
+
+let INVALID_FD = -1
+
+interface Destructable:
+    fn destroy(self)
+
+struct File:
+    fd: int
+
+fn File.destroy(self):
+    self.close()
+
+fn File.close(var self):
+    if self.fd != INVALID_FD:
+        close(self.fd)
+        self.fd = INVALID_FD
+

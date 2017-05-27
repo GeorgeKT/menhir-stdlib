@@ -1,0 +1,15 @@
+[package]
+name = "std"
+author = "Joris Guisson"
+email = "joris.guisson@gmail.com"
+license = "BSD"
+version = "0.1"
+
+[[target]]
+name = "std"
+type = "staticlib"
+
+[[target]]
+depends = ["std"]
+name = "obelix"
+type = "binary"
